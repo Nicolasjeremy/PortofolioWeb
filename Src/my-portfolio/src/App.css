@@ -1,0 +1,81 @@
+:root{
+  --ff: "Source Serif Pro";
+  --colorPrimary: #DB4C40;
+  --colorSecondary: #CECCC9;
+  --colorTers: #395649;
+  --Background: #181A1B;
+  --Background2: #7510F7;
+  --h1: bold 64px var(--ff)
+}
+
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.App {
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: var(--colorTers);
+}
+
+.header .logo {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.header nav a {
+  color: #fff;
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+.main-section {
+  background-color: var(--Background);
+  color: #fff;
+  padding: 5rem 2rem;
+  display: flex;
+
+}
+
+.main-section .intro {
+  font: var(--h1);
+  display: flex;
+}
+
+.main-section .profile-pic {
+  border-radius: 50%;
+  margin-right: 2rem;
+}
+
+.main-section .highlight {
+  color: var(--colorPrimary);
+}
+
+.about-section {
+  background-color: var(--Background2);
+  color: #fff;
+  padding: 5rem 2rem;
+}
+
+.about-section .about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-section .about-pic {
+  border-radius: 50%;
+  margin-left: 2rem;
+}
+
+.page{
+  width: 100%;
+  height: 100%;
+}
