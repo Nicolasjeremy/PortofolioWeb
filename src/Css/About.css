@@ -1,0 +1,50 @@
+.about-section {
+    background-color: var(--background-alt);
+    color: #fff;
+    padding: 3rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .AboutBox {
+    display: flex;
+    width: 70vw;
+    background-color: var(--color-tertiary);
+    border-radius: 5%;
+    padding: 2rem;
+    align-items: stretch;
+  }
+  
+  .AboutText {
+    flex: 1;
+    color: var(--color-secondary);
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .AboutText h1 {
+    font-size: 4rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem; /* Adjust margin as needed */
+  }
+  
+  .AboutText p {
+    font-size: 2rem;
+    margin: 0.5rem 0; /* Adjust margin as needed */
+  }
+  
+  .about-pic {
+    flex: 1;
+    border-radius: 5%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
