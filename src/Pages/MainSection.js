@@ -3,7 +3,7 @@ import "../App.css";
 
 const MainSection = () => {
   return (
-    <section className="main-section" id="home">
+    <section className="main-section">
       <div className="intro">
         <img
           src={`${process.env.PUBLIC_URL}/FotoMain.png`}
