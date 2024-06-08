@@ -4,14 +4,21 @@
   --color-secondary: #CECCC9;
   --color-tertiary: #395649;
   --background: #181A1B;
-  --background-alt: #7510F7;
-  --h1: bold 64px var(--ff);
+  --background-alt: #E0E0E0;
+  --h1: bold clamp(2rem, 5vw + 1rem, 4rem) var(--ff); /* Responsive font size for h1 */
+  --h2: bold clamp(1.5rem, 3vw + 1rem, 3rem) var(--ff); /* Responsive font size for h2 */
+  --p: clamp(1rem, 2vw + 0.5rem, 1.5rem); /* Responsive font size for paragraphs */
 }
 
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   overflow-x: hidden;
+}
+
+.page {
+  width: 100%;
+  height: 100vh;
 }
 
 .App {
@@ -26,7 +33,7 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000; /* Ensures the header stays on top of other content */
+  z-index: 1000;
 }
 
 .header .logo {
@@ -43,7 +50,7 @@ body {
 .main-section {
   background-color: var(--background);
   color: var(--color-secondary);
-  padding: 6rem 2rem; /* Increased padding-top to account for the fixed header */
+  padding: 6rem 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,18 +61,106 @@ body {
   font: var(--h1);
   display: flex;
   align-items: center;
+  flex-direction: column;
 }
 
 .main-section .profile-pic {
   border-radius: 50%;
-  margin-right: 2rem;
+  width: clamp(500px, 20vw, 1200px); /* Responsive profile picture size */
+  height: clamp(500px, 20vw, 1200px);
+  margin-bottom: 2rem;
 }
 
 .highlight {
   color: var(--color-primary);
 }
 
-.page {
-  width: 100%;
+@media (min-width: 768px) {
+  .main-section .intro {
+    flex-direction: row;
+  }
+  .main-section .profile-pic {
+    margin-bottom: 0;
+    margin-right: 2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .header nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  .header nav a {
+    margin: 0.5rem 0;
+  }
+  .main-section .intro h1 {
+    font-size: var(--h1);
+  }
+}
+
+.about-section {
+  background-color: var(--background-alt);
+  color: #fff;
+  padding: 3rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
+}
+
+.AboutBox {
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  height: 70%;
+  background-color: var(--color-tertiary);
+  border-radius: 5%;
+  padding: 2rem;
+}
+
+.AboutText {
+  flex: 1;
+  color: var(--color-secondary);
+  font-size: var(--p);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.AboutText h1 {
+  font-size: var(--h1);
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.AboutText p {
+  font-size: var(--p);
+  margin: 0.5rem 0;
+}
+
+.about-pic {
+  flex: 1;
+  border-radius: 5%;
+  width: clamp(500px, 20vw, 1200px); /* Responsive profile picture size */
+  height: clamp(500px, 20vw, 1200px);
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .AboutBox {
+    flex-direction: row;
+    width: 70vw;
+  }
+}
+
+@media (max-width: 767px) {
+  .AboutText h1 {
+    font-size: var(--h2);
+  }
+  .AboutText p {
+    font-size: var(--p);
+  }
 }

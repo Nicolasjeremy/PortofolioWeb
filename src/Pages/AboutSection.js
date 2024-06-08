@@ -1,6 +1,5 @@
 import React from "react";
 import "../App.css";
-import "../Css/About.css";
 
 const AboutSection = () => {
   return (
